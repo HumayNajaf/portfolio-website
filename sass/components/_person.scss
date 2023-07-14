@@ -1,0 +1,24 @@
+@use "../abstract/abstract" as *;
+@use "../utilities/container";
+
+.person {
+  @extend .container;
+  .person-img {
+    width: 37rem;
+    img {
+      width:100%;
+    }
+  }
+  .person-name {
+    @include font (map-get($colors, "dark gray"), 2.4rem, 600);
+  }
+  .contact {
+    @include font (map-get($colors, "dark gray"), 1.8rem, 500);
+  }
+  .job, .info {
+    @include font (map-get($colors, "gray"), 1.8rem, 500);
+  }
+
+ grid-column: 1/2;
+ grid-row: 1/3;
+}

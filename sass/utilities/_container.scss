@@ -1,0 +1,38 @@
+@use "../abstract/abstract" as *;
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: map-get($colors, "body");
+  font-family: "Montserrat", sans-serif;
+}
+main {
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 41.3rem);
+  grid-template-rows: repeat(7, 30.3rem);
+  gap: 4.5rem;
+}
+.container {
+  width: 41.3rem;
+  padding: 2.1rem;
+  background-color: map-get($colors, "white");
+  border-radius: 1.2rem;
+  flex-shrink: 0;
+}
+.brands {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.heading {
+  width: 86.2rem;
+  padding: 2.2rem;
+  border-radius: 1.2rem;
+  @include font(map-get($colors, "dark gray"), 1.8rem, 500);
+  background-color: map-get($colors, "white");
+}

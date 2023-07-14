@@ -1,0 +1,59 @@
+@use "../abstract/abstract" as *;
+
+.pr-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  .projects {
+      flex-shrink: 0;
+      width: 85.9rem;
+      display: flex;
+      gap: 3.5rem;
+      padding: 2rem;
+      border-radius: 1.2rem;
+      background-color: map-get($colors, "white");
+      align-items: center;
+      .project-img {
+        width: 32.1999rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      span {
+        @include font(map-get($colors, "dark gray"), 1.6rem, 500);
+      }
+      h1 {
+        @include font(map-get($colors, "very dark gray"), 2.4rem, 500);
+      }
+      p {
+        margin-top: 1.8rem;
+        @include font(map-get($colors, "gray"), 1.6rem, 500);
+      }
+      .buttons {
+        margin-top: 5.1rem;
+        .button-1 {
+          padding: 1.3rem;
+          border-radius: 1.2rem;
+          background-color: map-get($colors, "blue");
+          border: none;
+          @include font(map-get($colors, "white"), 1.8rem, 500);
+        }
+        .button-2 {
+          padding: 1.3rem;
+          border-radius: 1.2rem;
+          background-color: map-get($colors, "white");
+          border: 1px solid map-get($colors, "blue");
+          @include font(map-get($colors, "blue"), 1.8rem, 500);
+        }
+      }
+    }
+
+
+    grid-row: 2/5;
+    grid-column: 2/4;
+}
+  
+  

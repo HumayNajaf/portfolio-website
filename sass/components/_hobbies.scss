@@ -1,0 +1,28 @@
+@use "../abstract/abstract" as *;
+@use "../utilities/container" as *;
+
+.hobbies {
+  @extend .container;
+  span {
+    @include font(map-get($colors, "dark gray"), 2.4rem, 500);
+  }
+  .gaming {
+    margin-top: 2.6rem;
+  }
+  .hobbie-img {
+    width: 37.3rem;
+    img {
+      width: 100%;
+      border-radius: 1.2rem;
+    }
+  }
+  h2 {
+    @include font(map-get($colors, "very dark gray"), 1.8rem, 600);
+  }
+  p {
+    @include font(map-get($colors, "gray"), 1.6rem, 500);
+  }
+
+  grid-row: 5/8;
+  grid-column: 1/2;
+}

@@ -1,0 +1,45 @@
+@use "../abstract/abstract" as *;
+@use "../utilities/container" as *;
+
+.frontend-knowledge {
+  @extend .container;
+  h1 {
+    text-transform: uppercase;
+    @include font(map-get($colors, "dark gray"), 1.8rem, 700);
+  }
+
+  .knowledge {
+    @include font(map-get($colors, "dark gray"), 1.6rem, 500);
+    div {
+      display: flex;
+      justify-content: space-between;
+      progress {
+        width: 23.6852rem;
+        height: 0.9602rem;
+      }
+    }
+  }
+
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.design-knowledge {
+  @extend .container;
+  height: 15.7rem;
+  h1 {
+    @include font(map-get($colors, "dark gray"), 1.8rem, 700);
+  }
+  div {
+    @include font(map-get($colors, "dark gray"), 1.6rem, 500);
+    .design {
+      display: flex;
+      justify-content: space-between;
+    }
+    progress {
+      width: 23.6852rem;
+      height: 0.9602rem;
+    }
+  }
+  // grid-column: 3/4;
+  grid-row: 1/2;
+}

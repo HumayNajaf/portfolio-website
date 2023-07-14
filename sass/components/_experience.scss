@@ -1,0 +1,27 @@
+@use "../abstract/abstract" as *;
+@use "../utilities/container" as *;
+
+.experiences {
+  @extend .container;
+  h1 {
+    @include font(map-get($colors, "dark gray"), 2.4rem, 500);
+  }
+  .brands {
+    @extend .brands;
+    span {
+        @include font(map-get($colors, "very dark gray"), 1.6rem, 600, normal);
+    }
+    p {
+        @include font(map-get($colors, "gray"), 1.6rem, 500);
+    }
+  }
+  .brand-logo {
+    width: 8.4rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  grid-column: 1/2;
+  grid-row: 3/5;
+}

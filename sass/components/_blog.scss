@@ -1,0 +1,43 @@
+@use "../abstract/abstract" as *;
+
+.blog-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85.9rem;
+  flex-shrink: 0;
+  border-radius: 1.2rem;
+  background-color: map-get($colors, "white");
+  .blog-img {
+    width: 70rem;
+    padding-block: 3.4rem;
+    img {
+      width: 100%;
+      border-radius: 1.2rem;
+      overflow: hidden;
+    }
+  }
+  .blog-text {
+    padding: 3.4rem;
+    span {
+      @include font(map-get($colors, "very ligth gray"), 1.6rem, 500);
+    }
+    h1 {
+      @include font(map-get($colors, "very dark gray"), 2.4rem, 500);
+    }
+    p {
+      @include font(map-get($colors, "gray"), 1.6rem, 500);
+    }
+    a {
+      text-decoration: none;
+      @include font(map-get($colors, "blue"), 1.6rem, 500);
+    }
+  }
+  grid-row: 5/7;
+  grid-column: 2/4;
+}
